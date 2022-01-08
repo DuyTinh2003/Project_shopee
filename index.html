@@ -21,28 +21,77 @@
   </head>
   <body>
     <div class="main">
+      <!-- header -->
       <div class="header">
+        <!-- navigation -->
         <div class="nav grid wide">
+          <!-- navigation left -->
           <ul class="nav-list">
             <li class="nav-item separate mr--16">Kênh Người Bán</li>
             <li class="nav-item mr--8">Trở thành Người bán Shoppe</li>
-            <li class="nav-item separate mr--16">Tải ứng dụng</li>
+            <li class="nav-item separate mr--16">
+              Tải ứng dụng
+              <!--start QR-code -->
+              <div class="QR-code">
+                <img
+                  src="./assets/img/QR_code.png"
+                  alt="QR Code"
+                  class="header-qr"
+                />
+                <div class="QR-code--down">
+                  <a class="app-store QR-code--down--1">
+                    <img
+                      src="./assets/img/App_store.png"
+                      alt="App Store"
+                      class="QR-code--item"
+                    />
+                  </a>
+                  <a class="google-play QR-code--down--2">
+                    <img
+                      src="./assets/img/Google_play.png"
+                      alt="Google play"
+                      class="QR-code--item"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- end QR-code -->
+            </li>
             <li class="nav-item cursor-text separate--near mr--8">Kết nối</li>
+            <!-- icon facebook and instagram -->
             <i class="fab fa-facebook icon-nav"></i>
             <i class="fab fa-instagram-square icon-nav"></i>
           </ul>
+          <!-- navigation right -->
           <ul class="nav-list">
-            <li class="nav-item">
+            <li class="nav-item notification">
               <i class="far fa-bell icon-nav"></i>
               Thông Báo
+              <!-- start  notification  -->
+              <div class="notification--header">
+                <img
+                  src="./assets/img/notification.png"
+                  alt="IMG error"
+                  class="notification--img"
+                />
+                <p class="notification--info">Đăng nhập để xem Thông báo</p>
+                <div class="notification--end">
+                  <div class="log-in">Đăng ký</div>
+                  <div class="resgi">Đăng nhập</div>
+                </div>
+              </div>
             </li>
             <li class="nav-item mr--16">
               <i class="far fa-question-circle icon-nav"></i>
               Hỗ Trợ
             </li>
             <li class="nav-item">
-              <i class="fas fa-globe icon-nav"></i>
+              <i class="fas fa-globe icon-nav language"></i>
               Tiếng Việt
+              <div class="language--header">
+                <div class="tiengviet">Tiếng việt</div>
+                <div class="english">English</div>
+              </div>
               <i class="fas fa-chevron-down icon-nav"></i>
             </li>
             <li class="nav-item separate mr--16 ml--16">Đăng Ký</li>

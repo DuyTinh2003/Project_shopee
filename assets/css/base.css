@@ -24,3 +24,12 @@ html {
 .ml--16 {
   margin-left: 16px !important;
 }
+/* made in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

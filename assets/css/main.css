@@ -16,13 +16,14 @@
   list-style: none;
   margin: 0;
 }
+.nav-item:hover,
+.icon-nav:hover {
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
 .cursor-text:hover {
   color: var(--white-color);
   cursor: text;
-}
-.nav-item:hover {
-  color: rgba(255, 255, 255, 0.6);
-  cursor: pointer;
 }
 .nav-item {
   display: inline-block;
@@ -35,7 +36,7 @@
   position: absolute;
   height: 13px;
   border-left: 2px solid #fb9086;
-  top: 50%;
+  top: 68%;
   right: -12px;
   transform: translateY(-50%);
 }
@@ -45,7 +46,7 @@
   position: absolute;
   height: 13px;
   border-left: 2px solid #fb9086;
-  top: 50%;
+  top: 68%;
   right: -5px;
   transform: translateY(-50%);
 }
@@ -53,8 +54,161 @@
   font-size: 1.5rem;
   margin: 0 4px;
 }
+/* QR code */
+.nav-list > li:nth-child(3) {
+  position: relative;
+}
+.QR-code {
+  background-color: var(--white-color);
+  position: absolute;
+  width: 233%;
+  height: 233px;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  top: 150%;
+  display: none;
+  animation: fade-in linear 0.5s;
+}
+.QR-code::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -16px;
+  height: 10%;
+}
+.nav-list > li:nth-child(3):hover .QR-code {
+  color: var(--white-color);
+  cursor: default;
+  display: block;
+}
+.QR-code--down {
+  display: flex;
+  justify-content: space-between;
+}
+.header-qr {
+  width: 100%;
+}
+.QR-code--item {
+  height: 16px;
+}
+.QR-code--down--1 {
+  margin-left: 11px;
+}
+.QR-code--down--2 {
+  margin-right: 11px;
+}
 /* end navigation */
+/* notification */
+.notification {
+  position: relative;
+}
+.notification:hover .notification--header {
+  display: block;
+}
+.notification--header:hover {
+  color: var(--white-color);
+}
+.notification--header::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 20px;
+  border-top: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid var(--white-color);
+  border-radius: 3px;
+  position: absolute;
+  top: -15%;
+  right: 0px;
+}
+.notification--header {
+  position: absolute;
+  width: 370px;
+  height: 350px;
+  right: 0;
+  top: 140%;
+  background-color: var(--white-color);
+  border: 1px solid #adb5bd;
+  border-radius: 2px;
+  display: none;
+  animation: fade-in linear 0.4s;
+}
+.notification--img {
+  display: block;
+  width: 25%;
+  margin: 80px auto 20px auto;
+}
+.notification--info {
+  text-align: center;
+  color: var(--text-color);
+  cursor: text;
+  font-size: 1.4rem;
+}
 
+.notification--end {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  background-color: #e9ecef;
+}
+.log-in:hover,
+.resgi:hover {
+  background-color: #ced4da;
+  cursor: pointer;
+  color: #fe6332;
+}
+.log-in {
+  display: inline-block;
+  width: 49%;
+  padding: 12px;
+  color: var(--text-color);
+}
+.resgi {
+  display: inline-block;
+  width: 50%;
+  padding: 12px;
+  color: var(--text-color);
+}
+/* language  */
+
+.language {
+  position: relative;
+}
+.language--header::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 20px;
+  border-top: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid var(--white-color);
+  border-radius: 3px;
+  position: absolute;
+  top: -74%;
+  right: 19px;
+}
+.language--header {
+  position: absolute;
+  width: 200px;
+  right: 0;
+  bottom: -79px;
+  font-size: 1.5rem;
+  background-color: var(--white-color);
+  display: none;
+}
+.language:hover .language--header {
+  display: block;
+}
+.tiengviet,
+.english {
+  padding: 9px;
+  color: var(--text-color);
+}
 .content {
   height: 1000px;
+  background-color: var(--text-color);
 }

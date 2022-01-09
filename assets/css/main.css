@@ -132,8 +132,11 @@
   background-color: var(--white-color);
   border: 1px solid #adb5bd;
   border-radius: 2px;
+  cursor: default;
+  transform-origin: calc(100% - 20px) top;
+  animation: growth ease 0.4s;
+  will-change: opacity, transform;
   display: none;
-  animation: fade-in linear 0.4s;
 }
 .notification--img {
   display: block;
@@ -199,6 +202,7 @@
   font-size: 1.5rem;
   background-color: var(--white-color);
   display: none;
+  animation: fade-in linear 0.4s;
 }
 .language:hover .language--header {
   display: block;
@@ -208,6 +212,32 @@
   padding: 9px;
   color: var(--text-color);
 }
+/* modal registration  and login */
+.modal {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.modal__overplay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__body {
+  width: 395px;
+  height: 435px;
+  margin: auto;
+  background-color: red;
+  z-index: 1;
+}
+/* end navigation */
+
+/* start search */
+
 .content {
   height: 1000px;
   background-color: var(--text-color);

@@ -2,6 +2,7 @@
   --white-color: #fff;
   --black-color: #000;
   --text-color: #333;
+  --primary-color: #ee4d2e;
 }
 * {
   box-sizing: inherit;
@@ -36,7 +37,7 @@ html {
 /* animation growth */
 @keyframes growth {
   from {
-    transform: scale(0);
+    transform: scale(var(--from));
   }
   to {
     transform: scale(1);
@@ -50,6 +51,7 @@ html {
   right: 0;
   left: 0;
   bottom: 0;
+  animation: fade-in linear 0.1s;
   display: none;
 }
 .modal__overplay {
@@ -57,4 +59,22 @@ html {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__body {
+  --from: 0.7;
+  margin: auto;
+  z-index: 1;
+  animation: growth linear 0.1s;
+}
+.btn {
+  min-width: 120px;
+  min-height: 25px;
+  border: none;
+  margin: 0;
+  padding: 8px 0px;
+  cursor: pointer;
+}
+.btn.btn--primary {
+  background-color: #f8492f;
+  border: none;
 }

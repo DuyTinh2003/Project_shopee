@@ -1,12 +1,13 @@
 /* header */
+
 .header {
-  height: 11.9rem;
   width: 100%;
+  height: var(--header-width);
   background-image: linear-gradient(0, #fe6332, #f53f2d);
 }
 /* start navigation */
 .nav {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--white-color);
   display: flex;
   justify-content: space-between;
@@ -39,16 +40,7 @@
   top: 68%;
   right: -12px;
   transform: translateY(-50%);
-}
-.separate--near::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 13px;
-  border-left: 2px solid #fb9086;
-  top: 68%;
-  right: -5px;
-  transform: translateY(-50%);
+  z-index: 1;
 }
 .icon-nav {
   font-size: 1.5rem;
@@ -68,6 +60,7 @@
   top: 150%;
   display: none;
   animation: fade-in linear 0.5s;
+  z-index: 1;
 }
 .QR-code::before {
   content: "";
@@ -75,6 +68,7 @@
   width: 100%;
   top: -16px;
   height: 10%;
+  z-index: 1;
 }
 .nav-list > li:nth-child(3):hover .QR-code {
   color: var(--white-color);
@@ -122,6 +116,16 @@
   position: absolute;
   top: -15%;
   right: 0px;
+  z-index: 1;
+}
+.notification--header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 20px;
+  top: -10px;
+  position: absolute;
+  z-index: 1;
 }
 .notification--header {
   position: absolute;
@@ -132,11 +136,11 @@
   background-color: var(--white-color);
   border: 1px solid #adb5bd;
   border-radius: 2px;
-  cursor: default;
   transform-origin: calc(100% - 20px) top;
-  animation: growth ease 0.4s;
+  animation: growth-full ease 0.25s;
   will-change: opacity, transform;
   display: none;
+  z-index: 1;
 }
 .notification--img {
   display: block;
@@ -193,16 +197,27 @@
   position: absolute;
   top: -74%;
   right: 19px;
+  z-index: 1;
+}
+.language--header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 20px;
+  top: -12px;
+  position: absolute;
+  z-index: 1;
 }
 .language--header {
   position: absolute;
   width: 200px;
-  right: 0;
-  bottom: -79px;
+  right: -20px;
+  bottom: -78px;
   font-size: 1.5rem;
   background-color: var(--white-color);
   display: none;
-  animation: fade-in linear 0.4s;
+  animation: fade-in linear 0.25s;
+  z-index: 1;
 }
 .language:hover .language--header {
   display: block;
@@ -311,16 +326,17 @@
 .button--icon > i {
   margin: 0 18px 0 12px;
 }
-.button--icon.first {
+.btn--link-fb {
   background-color: #0674e7;
   color: var(--white-color);
   padding: 8px 0;
 }
-.button--icon.second {
+.btn--link-google {
   color: var(--text-color);
   background-color: var(--white-color);
   padding: 8px 0;
 }
+
 /* login form*/
 .auth-form__support {
   font-weight: 420;
@@ -332,8 +348,177 @@
   margin: 0 10px;
 }
 /* end login and regis */
-/* start search */
 
+/* start header width search*/
+.logo-shoppe {
+  cursor: pointer;
+}
+.header-with-search {
+  height: var(--header-width-search-height);
+  display: flex;
+  align-items: center;
+}
+.header__search-logo {
+  width: 148px;
+  margin: 6px 30px 0 0;
+}
+/* search bar */
+.header__search-bar {
+  flex: 1;
+  display: flex;
+  height: 40px;
+  font-size: 1.4rem;
+  font-weight: 380;
+}
+.header__search-input {
+  flex: 1;
+  padding-left: 22px;
+}
+.header__input-text {
+  width: 100%;
+  height: 100%;
+  padding-left: 16px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  outline: none;
+  border: none;
+}
+.header__selection {
+  display: flex;
+  align-items: center;
+  background-color: var(--white-color);
+  font-size: 1.5rem;
+  font-weight: 380;
+  color: var(--text-color);
+  padding-left: 18px;
+  border-left: 1.5px solid #e8e8e8;
+  cursor: pointer;
+  position: relative;
+}
+.header__selection > i {
+  margin: 0 10px 0 16px;
+}
+.current-selection--option {
+  display: inline-block;
+  font-weight: 380;
+}
+.header__selection:hover .selection--option {
+  display: block;
+}
+.selection--option::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -16px;
+  height: 22%;
+  z-index: 1;
+}
+.selection--option {
+  position: absolute;
+  text-align: left;
+  top: 116%;
+  width: 100%;
+  left: 0;
+  background-color: var(--white-color);
+  z-index: 1;
+  border-radius: 1.5px;
+  display: none;
+}
+.selection--option > .btn {
+  padding: 12px 16px 12px 12px;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+.selection--option > .btn:hover {
+  background-color: #f5f3f3;
+}
+
+.option--icon-check {
+  margin-left: 10px;
+  color: red;
+}
+.header__search-icon {
+  display: flex;
+  align-items: center;
+  background-color: var(--white-color);
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  cursor: pointer;
+}
+.header__search-icon > i {
+  font-size: 1.8rem;
+  padding: 8px 22px;
+  background-color: var(--primary-color);
+  margin-right: 3px;
+  border-radius: 2px;
+  color: var(--white-color);
+}
+
+.header__icon--buy {
+  margin: 10px 50px 0px 50px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.header__icon--buy > i {
+  font-size: 2.7rem;
+  color: var(--white-color);
+}
+.header__icon--buy:hover .situation-cart {
+  display: flex;
+}
+.situation-cart {
+  position: absolute;
+  top: 100%;
+  right: -5px;
+  width: 400px;
+  height: 270px;
+  border-radius: 2.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  transform-origin: calc(100% - 20px) top;
+  animation: growth-full ease 0.3s;
+  cursor: default;
+  display: none;
+  z-index: 1;
+}
+.situation-cart::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 20px;
+  border-top: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid var(--white-color);
+  border-radius: 3px;
+  position: absolute;
+  top: -17%;
+  right: -5px;
+  z-index: 1;
+}
+.situation-cart::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -12px;
+  height: 5%;
+  z-index: 1;
+}
+.cart-img {
+  width: 20%;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+.noti-cart {
+  font-size: 1.5rem;
+  font-weight: 380;
+  cursor: text;
+}
 .content {
   height: 1000px;
   background-color: var(--text-color);

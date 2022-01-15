@@ -3,6 +3,10 @@
   --black-color: #000;
   --text-color: #333;
   --primary-color: #ee4d2e;
+  --header-height: 120px;
+  --nav-height: 24px;
+  --header-width-search-height: calc(var(--header-height) - var(--nav-height));
+  --from: 0.7;
 }
 * {
   box-sizing: inherit;
@@ -43,6 +47,14 @@ html {
     transform: scale(1);
   }
 }
+@keyframes growth-full {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 /* modal */
 .modal {
   display: flex;
@@ -61,7 +73,6 @@ html {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal__body {
-  --from: 0.7;
   margin: auto;
   z-index: 1;
   animation: growth linear 0.1s;

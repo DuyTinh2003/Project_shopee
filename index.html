@@ -64,10 +64,12 @@
                 </div>
                 <!-- end QR-code -->
               </li>
-              <li class="nav-item cursor-text">Kết nối</li>
-              <!-- icon facebook and instagram -->
-              <i class="fab fa-facebook icon-nav"></i>
-              <i class="fab fa-instagram-square icon-nav"></i>
+              <li class="nav-item cursor-text">
+                Kết nối
+                <!-- icon facebook and instagram -->
+                <i class="fab fa-facebook icon-nav"></i>
+                <i class="fab fa-instagram-square icon-nav"></i>
+              </li>
             </ul>
             <!-- navigation right -->
             <ul class="nav-list">
@@ -107,8 +109,22 @@
                   style="position: absolute; top: 37%"
                 ></i>
               </li>
-              <li class="nav-item separate mr--16 ml--16">Đăng Ký</li>
-              <li class="nav-item">Đăng Nhập</li>
+              <!-- swap when login -->
+              <!-- <li class="nav-item separate mr--16 ml--16">Đăng Ký</li>
+              <li class="nav-item">Đăng Nhập</li> -->
+              <li class="nav-item nav__user">
+                <img
+                  src="./assets/img/cute-583x580.jpg"
+                  alt=""
+                  class="img-user"
+                />
+                <span class="name-user">Tranduytinh</span>
+                <div class="option-user">
+                  <a href="" class="option-user--item">Tài Khoản Của Tôi</a>
+                  <a href="" class="option-user--item">Đơn Mua</a>
+                  <a href="" class="option-user--item">Đăng Xuất</a>
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -134,10 +150,27 @@
                   type="text"
                   placeholder="Tìm trong Shop này"
                 />
+                <div class="header__search-history">
+                  <h3 class="history--title">Lịch sử tìm kiếm</h3>
+                  <ul class="history-list">
+                    <li class="history-item">
+                      <a href="" class="link-history">Kenh đánh răng</a>
+                    </li>
+                    <li class="history-item">
+                      <a href="" class="link-history">Kem dâu tây</a>
+                    </li>
+                    <li class="history-item">
+                      <a href="" class="link-history">Kem sô cô la</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
+
               <div class="header__selection">
-                <div class="current-selection--option">Trong Shop này</div>
-                <i class="ti-angle-down"></i>
+                <div class="header__option--container">
+                  <div class="current-selection--option">Trong Shop này</div>
+                  <i class="ti-angle-down"></i>
+                </div>
                 <div class="selection--option">
                   <div class="btn option--shop">
                     Trong Shop này
@@ -152,21 +185,280 @@
                 <i class="ti-search"></i>
               </div>
             </div>
-            <div class="header__icon--buy">
-              <i class="ti-shopping-cart"></i>
-              <div class="situation-cart">
+            <div class="header__cart">
+              <!-- <i class="ti-shopping-cart"></i> -->
+              <i class="fas fa-cart-plus"></i>
+              <div class="header__quantity-product">10</div>
+              <!-- swap no cart: header__cart-list--no-cart -->
+              <div class="header__cart-list">
                 <img
                   src="./assets/img/Icongiohang.png"
                   alt="Giỏ hàng"
                   class="cart-img"
                 />
                 <p class="noti-cart">Chưa Có Sản Phẩm</p>
+                <ul class="header__cart-product-list">
+                  <h4 class="header__cart-title">Sản Phẩm Mới Thêm</h4>
+                  <li class="header__cart-item">
+                    <img
+                      src="https://img.abaha.vn/photos/origin/83-1580794419-myphamohui-lgvina.png"
+                      alt=""
+                      class="header__cart-img"
+                    />
+                    <div class="header__cart-item-info">
+                      <div class="header__cart-item-header">
+                        <p class="header__cart-item-title">
+                          Bộ kem trị vùng mắt Ohui
+                        </p>
+                        <div class="header__cart-item-wrap">
+                          <span class="header__cart-item-price"
+                            >2.020.000đ</span
+                          >
+                          <span class="header__cart-item-multiple">x</span>
+                          <span class="header__cart-item-quantity">1</span>
+                        </div>
+                      </div>
+                      <div class="header__cart-item-body">
+                        <p class="header__cart-item-type">
+                          Phân loại hàng: Bạc
+                        </p>
+                        <button class="header__cart-item-remove">Xóa</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__cart-item">
+                    <img
+                      src="https://img.abaha.vn/photos/origin/83-1580711393-myphamohui-lgvina.png"
+                      alt=""
+                      class="header__cart-img"
+                    />
+                    <div class="header__cart-item-info">
+                      <div class="header__cart-item-header">
+                        <p class="header__cart-item-title">
+                          Bộ kem trị vùng mắt Ohui
+                        </p>
+                        <div class="header__cart-item-wrap">
+                          <span class="header__cart-item-price"
+                            >2.020.000đ</span
+                          >
+                          <span class="header__cart-item-multiple">x</span>
+                          <span class="header__cart-item-quantity">1</span>
+                        </div>
+                      </div>
+                      <div class="header__cart-item-body">
+                        <p class="header__cart-item-type">
+                          Phân loại hàng: Bạc
+                        </p>
+                        <button class="header__cart-item-remove">Xóa</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__cart-item">
+                    <img
+                      src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png"
+                      alt=""
+                      class="header__cart-img"
+                    />
+                    <div class="header__cart-item-info">
+                      <div class="header__cart-item-header">
+                        <p class="header__cart-item-title">
+                          Bộ kem trị vùng mắt Ohui
+                        </p>
+                        <div class="header__cart-item-wrap">
+                          <span class="header__cart-item-price"
+                            >2.020.000đ</span
+                          >
+                          <span class="header__cart-item-multiple">x</span>
+                          <span class="header__cart-item-quantity">1</span>
+                        </div>
+                      </div>
+                      <div class="header__cart-item-body">
+                        <p class="header__cart-item-type">
+                          Phân loại hàng: Bạc
+                        </p>
+                        <button class="header__cart-item-remove">Xóa</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__cart-item">
+                    <img
+                      src="https://img.abaha.vn/photos/origin/83-1580794419-myphamohui-lgvina.png"
+                      alt=""
+                      class="header__cart-img"
+                    />
+                    <div class="header__cart-item-info">
+                      <div class="header__cart-item-header">
+                        <p class="header__cart-item-title">
+                          Bộ kem trị vùng mắt Ohui
+                        </p>
+                        <div class="header__cart-item-wrap">
+                          <span class="header__cart-item-price"
+                            >2.020.000đ</span
+                          >
+                          <span class="header__cart-item-multiple">x</span>
+                          <span class="header__cart-item-quantity">1</span>
+                        </div>
+                      </div>
+                      <div class="header__cart-item-body">
+                        <p class="header__cart-item-type">
+                          Phân loại hàng: Bạc
+                        </p>
+                        <button class="header__cart-item-remove">Xóa</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__cart-item">
+                    <img
+                      src="https://img.abaha.vn/photos/origin/83-1580794419-myphamohui-lgvina.png"
+                      alt=""
+                      class="header__cart-img"
+                    />
+                    <div class="header__cart-item-info">
+                      <div class="header__cart-item-header">
+                        <p class="header__cart-item-title">
+                          Bộ kem trị vùng mắt Ohui
+                        </p>
+                        <div class="header__cart-item-wrap">
+                          <span class="header__cart-item-price"
+                            >2.020.000đ</span
+                          >
+                          <span class="header__cart-item-multiple">x</span>
+                          <span class="header__cart-item-quantity">1</span>
+                        </div>
+                      </div>
+                      <div class="header__cart-item-body">
+                        <p class="header__cart-item-type">
+                          Phân loại hàng: Bạc
+                        </p>
+                        <button class="header__cart-item-remove">Xóa</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__cart-item">
+                    <img
+                      src="https://img.abaha.vn/photos/origin/83-1580794419-myphamohui-lgvina.png"
+                      alt=""
+                      class="header__cart-img"
+                    />
+                    <div class="header__cart-item-info">
+                      <div class="header__cart-item-header">
+                        <p class="header__cart-item-title">
+                          Bộ kem trị vùng mắt Ohui
+                        </p>
+                        <div class="header__cart-item-wrap">
+                          <span class="header__cart-item-price"
+                            >2.020.000đ</span
+                          >
+                          <span class="header__cart-item-multiple">x</span>
+                          <span class="header__cart-item-quantity">1</span>
+                        </div>
+                      </div>
+                      <div class="header__cart-item-body">
+                        <p class="header__cart-item-type">
+                          Phân loại hàng: Bạc
+                        </p>
+                        <button class="header__cart-item-remove">Xóa</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__cart-item">
+                    <img
+                      src="https://img.abaha.vn/photos/origin/83-1580794419-myphamohui-lgvina.png"
+                      alt=""
+                      class="header__cart-img"
+                    />
+                    <div class="header__cart-item-info">
+                      <div class="header__cart-item-header">
+                        <p class="header__cart-item-title">
+                          Bộ kem trị vùng mắt Ohui
+                        </p>
+                        <div class="header__cart-item-wrap">
+                          <span class="header__cart-item-price"
+                            >2.020.000đ</span
+                          >
+                          <span class="header__cart-item-multiple">x</span>
+                          <span class="header__cart-item-quantity">1</span>
+                        </div>
+                      </div>
+                      <div class="header__cart-item-body">
+                        <p class="header__cart-item-type">
+                          Phân loại hàng: Bạc
+                        </p>
+                        <button class="header__cart-item-remove">Xóa</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__cart-item">
+                    <img
+                      src="https://img.abaha.vn/photos/origin/83-1580794419-myphamohui-lgvina.png"
+                      alt=""
+                      class="header__cart-img"
+                    />
+                    <div class="header__cart-item-info">
+                      <div class="header__cart-item-header">
+                        <p class="header__cart-item-title">
+                          Bộ kem trị vùng mắt Ohui
+                        </p>
+                        <div class="header__cart-item-wrap">
+                          <span class="header__cart-item-price"
+                            >2.020.000đ</span
+                          >
+                          <span class="header__cart-item-multiple">x</span>
+                          <span class="header__cart-item-quantity">1</span>
+                        </div>
+                      </div>
+                      <div class="header__cart-item-body">
+                        <p class="header__cart-item-type">
+                          Phân loại hàng: Bạc
+                        </p>
+                        <button class="header__cart-item-remove">Xóa</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <button href="" class="btn btn--primary header__cart-btn-view">
+                  Xem giỏ hàng
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="content"></div>
+
+      <div class="content grid wide">
+        <div class="row">
+          <div class="col l-2"></div>
+          <div class="col l-10">
+            <div class="content__sort-bar">
+              <p class="content__sort-label">Sắp xếp theo</p>
+              <button class="btn btn--primary">Phổ Biến</button>
+              <button class="btn">Mới nhất</button>
+              <button class="btn">Bán Chạy</button>
+              <div class="content__sort-price">
+                Giá
+                <i class="ti-angle-down"></i>
+              </div>
+              <div class="sort-bar__wrap-position">
+                <span class="sort-bar__position-page">1</span>
+                <span class="sort-bar__total-page">/15</span>
+              </div>
+              <div class="btn sort-bar__control-left">
+                <i class="ti-angle-left"></i>
+              </div>
+              <div class="btn sort-bar__control-right">
+                <i class="ti-angle-right"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col l-2-4"></div>
+              <div class="col l-2-4"></div>
+              <div class="col l-2-4"></div>
+              <div class="col l-2-4"></div>
+              <div class="col l-2-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="footer"></div>
     </div>
     <!-- modal -->
@@ -246,7 +538,7 @@
         </div> -->
 
         <!-- login form-->
-        <div class="auth-container">
+        <!-- <div class="auth-container">
           <div class="auth-form">
             <div class="auth-form__header">
               <div class="auth-form__heading">Đăng Nhập</div>
@@ -306,7 +598,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </body>

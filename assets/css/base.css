@@ -79,13 +79,19 @@ html {
 }
 .btn {
   min-width: 120px;
-  min-height: 25px;
+  min-height: 35px;
   border: none;
   margin: 0;
   padding: 8px 0px;
   cursor: pointer;
+  font-size: 1.3rem;
+  background-color: var(--white-color);
+}
+.btn:hover {
+  opacity: 0.8;
 }
 .btn.btn--primary {
   background-color: #f8492f;
   border: none;
+  color: var(--white-color);
 }

@@ -272,10 +272,11 @@
   position: absolute;
   width: 200px;
   right: -20px;
-  bottom: -78px;
+  bottom: -80px;
   font-size: 1.5rem;
   background-color: var(--white-color);
   display: none;
+  border: 1px solid #adb5bd;
   animation: fade-in linear 0.25s;
   z-index: 1;
 }
@@ -445,7 +446,7 @@
 .header__search-history {
   position: absolute;
   width: calc(100% - 60px);
-  top: 110%;
+  top: calc(100% + 7px);
   background-color: var(--white-color);
   border-radius: 2.5px;
   overflow: hidden;
@@ -519,6 +520,7 @@
   left: 0;
   background-color: var(--white-color);
   z-index: 1;
+  box-shadow: 0 1px 2px #b8b7b7;
   border-radius: 1.5px;
   display: none;
 }
@@ -567,7 +569,7 @@
 }
 .header__cart-list {
   position: absolute;
-  top: 100%;
+  top: 96%;
   right: -5px;
   width: 400px;
   border-radius: 2.5px;
@@ -642,7 +644,7 @@
 .header__cart-product-list {
   margin: 0;
   list-style: none;
-  max-height: 50vh;
+  max-height: 57vh;
   overflow-y: auto;
   width: 100%;
   padding-left: 0;
@@ -717,24 +719,251 @@
 .header__cart-btn-view {
   margin: 16px 0 16px 256px;
 }
+/* end header */
+
+/* start content */
 .content {
   height: 1000px;
-  background-color: var(--while-color);
 }
+/*go-back */
+.content__goback {
+  margin: 20px 3px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.content__goback-link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+/*side-bar */
+.content__side-bar {
+}
+.side-bar__wrap--info-shop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.side-bar__background-img {
+  background-image: url("https://cf.shopee.vn/file/ff628c765f10d09863441ed0117d723d_tn");
+  background-image: url("https://beedesign.com.vn/wp-content/uploads/2020/09/thiet-ke-logo-con-rua-game.jpg");
+  /* background-image: url(/assets/img/DT-logo.png); */
+  width: 100%;
+  height: 172px;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(2px);
+}
+.side-bar__status-shop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.side-bar__wrap-logo-shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+.side-bar__logo-shop {
+  border: 5px solid var(--white-color);
+  border-radius: 50%;
+  width: 96px;
+}
+.side-bar__type-shop {
+  position: absolute;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  top: calc(100% - 16px);
+  font-size: 1.2rem;
+  padding: 3px 4px;
+}
+.side-bar__name-shop {
+  margin: 0;
+  color: var(--white-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.side-bar__situation-shop {
+  margin: 0;
+  margin-top: 10px;
+  color: var(--white-color);
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+.side-bar__category {
+  padding: 0 20px 20px;
+  font-size: 1.3rem;
+  background-color: #ffffff;
+}
+.side-bar__category-shop {
+  padding: 20px 0;
+  font-size: 1.4rem;
+}
+.side-bar__category-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e1e1;
+}
+.side-bar__category-item:last-child {
+  margin-bottom: 24px;
+  border-bottom: none;
+}
+/*sort bar */
 .content__sort-bar {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ededed;
+  padding: 8px 20px;
+  margin-bottom: 10px;
+}
+.sort-bar--wrap {
+  display: flex;
+  align-items: center;
 }
 .content__sort-label {
+  font-size: 1.4rem;
+  margin-right: 16px;
+}
+.content__sort-label ~ button {
+  margin-right: 10px;
+}
+.content__sort-price:hover .content__sort-price--list {
+  display: block;
 }
 .content__sort-price {
+  position: relative;
+  width: 200px;
+  height: 34px;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  font-size: 1.4rem;
+  border-radius: 2px;
+}
+.sort-price--wrap {
+  line-height: 34px;
+  padding: 0 12px;
+}
+.sort-price--icon {
+  float: right;
+  line-height: 39px;
+}
+.content__sort-price--list::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -16px;
+  height: 18px;
+  z-index: 1;
+}
+.content__sort-price--list {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  top: calc(100% + 2px);
+  background-color: #ffffff;
+  list-style: none;
+  border-radius: 2px;
+  display: none;
+}
+.content__sort-price--item:hover {
+  color: var(--primary-color);
+}
+.content__sort-price--item {
+  padding: 20px 16px 0px;
+}
+.content__sort-price--item:last-child {
+  padding-bottom: 20px;
 }
 .sort-bar__wrap-position {
+  cursor: default;
+  margin-right: 20px;
+  font-size: 1.4rem;
 }
 .sort-bar__position-page {
+  color: var(--primary-color);
 }
 .sort-bar__total-page {
 }
+.sort-bar__control {
+  display: flex;
+  align-items: center;
+  width: 36px;
+  height: 34px;
+  background-color: #f9f9f9;
+  justify-content: center;
+  box-shadow: 0 1px 1px #cecece;
+  cursor: pointer;
+}
 .sort-bar__control-left {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-right: 1px solid #f2f2f2;
 }
 .sort-bar__control-right {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.sort-bar__control--disible {
+  opacity: 0.8;
+  color: rgba(0, 0, 0, 0.26);
+  cursor: default;
+}
+
+/* product */
+.product-item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background-color: var(--white-color);
+}
+.product-item__img {
+  position: absolute;
+  width: 100%;
+}
+.product-item__background-img {
+  position: relative;
+  width: 100%;
+}
+.product-item__info {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  max-height: 2.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 8px 10px;
+  font-weight: 400;
+}
+.product-item__price {
+}
+.product-item__price-old {
+}
+.product-item__price-new {
+}
+.product-item__active {
+}
+.product-item__active-tym {
+}
+.product-item__active-emptry {
+}
+.product-item__active-filled {
+}
+.product-item__active-rating {
+}
+.product-item__price {
+}
+.product-item__origin {
 }

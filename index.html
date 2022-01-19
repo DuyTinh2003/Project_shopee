@@ -73,7 +73,7 @@
             </ul>
             <!-- navigation right -->
             <ul class="nav-list">
-              <li class="nav-item notification">
+              <li class="nav-item notification mr--16">
                 <i class="far fa-bell icon-nav"></i>
                 Thông Báo
                 <!-- start  notification  -->
@@ -111,7 +111,7 @@
               </li>
               <!-- swap when login -->
               <!-- <li class="nav-item separate mr--16 ml--16">Đăng Ký</li>
-              <li class="nav-item">Đăng Nhập</li> -->
+                <li class="nav-item">Đăng Nhập</li> -->
               <li class="nav-item nav__user">
                 <img
                   src="./assets/img/cute-583x580.jpg"
@@ -424,41 +424,139 @@
           </div>
         </div>
       </div>
-
+      <!-- content -->
       <div class="content grid wide">
+        <!-- go back-->
         <div class="row">
-          <div class="col l-2"></div>
-          <div class="col l-10">
-            <div class="content__sort-bar">
-              <p class="content__sort-label">Sắp xếp theo</p>
-              <button class="btn btn--primary">Phổ Biến</button>
-              <button class="btn">Mới nhất</button>
-              <button class="btn">Bán Chạy</button>
-              <div class="content__sort-price">
-                Giá
-                <i class="ti-angle-down"></i>
+          <div class="content__goback">
+            <i class="ti-angle-left"></i>
+            <a href="" class="content__goback-link">TRỞ LẠI TRANG CỦA SHOP</a>
+          </div>
+        </div>
+        <!-- content main -->
+        <div class="row">
+          <!-- side bar -->
+          <div class="col l-2">
+            <div class="content__side-bar">
+              <div class="side-bar__wrap--info-shop">
+                <div class="side-bar__background-img"></div>
+                <div class="side-bar__status-shop">
+                  <a href="" class="side-bar__wrap-logo-shop">
+                    <img
+                      src="./assets/img/DT-logo.png"
+                      alt=""
+                      class="side-bar__logo-shop"
+                    />
+                    <div class="side-bar__type-shop">Yêu Thích+</div>
+                  </a>
+                  <h5 class="side-bar__name-shop">Duy Tịnh</h5>
+                  <p class="side-bar__situation-shop">Online 9 phút trước</p>
+                </div>
               </div>
-              <div class="sort-bar__wrap-position">
-                <span class="sort-bar__position-page">1</span>
-                <span class="sort-bar__total-page">/15</span>
-              </div>
-              <div class="btn sort-bar__control-left">
-                <i class="ti-angle-left"></i>
-              </div>
-              <div class="btn sort-bar__control-right">
-                <i class="ti-angle-right"></i>
+
+              <div class="side-bar__category">
+                <div class="side-bar__category-shop">DANH MỤC SHOP</div>
+                <div class="side-bar__category-item">Kem Đánh Răng</div>
+                <div class="side-bar__category-item">Kem Rửa mặt</div>
+                <div class="side-bar__category-item">Kem Dâu tây</div>
+                <div class="side-bar__category-item">Kem Sô Cô La</div>
+                <div class="side-bar__category-item">Kem Đậu Xanh</div>
+                <div class="side-bar__category-item">Kem Đậu Đỏ</div>
+                <div class="side-bar__category-item">Kem Dâu Tây</div>
+                <div class="side-bar__category-item">Kem Mít</div>
+                <div class="side-bar__category-item">Kem Ổi</div>
+                <div class="side-bar__category-item">Kem Bưởi</div>
+                <div class="side-bar__category-item">Giảm Giá</div>
               </div>
             </div>
+          </div>
+          <!-- sort bar -->
+          <div class="col l-10">
+            <div class="content__sort-bar">
+              <div class="sort-bar--wrap">
+                <p class="content__sort-label">Sắp xếp theo</p>
+                <button class="btn btn--primary size-m">Phổ Biến</button>
+                <button class="btn size-m">Mới nhất</button>
+                <button class="btn size-m">Bán Chạy</button>
+                <div class="content__sort-price">
+                  <div class="sort-price--wrap">
+                    Giá
+                    <div class="sort-price--icon">
+                      <i class="ti-angle-down"></i>
+                    </div>
+                  </div>
+                  <ul class="content__sort-price--list">
+                    <li class="content__sort-price--item">Giá: Thấp đến Cao</li>
+                    <li class="content__sort-price--item">Giá: Cao đến Thấp</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sort-bar--wrap">
+                <div class="sort-bar__wrap-position">
+                  <span class="sort-bar__position-page">1</span>/<span
+                    class="sort-bar__total-page"
+                    >15</span
+                  >
+                </div>
+                <a
+                  class="sort-bar__control sort-bar__control-left sort-bar__control--disible"
+                >
+                  <i class="ti-angle-left"></i>
+                </a>
+                <a class="sort-bar__control sort-bar__control-right">
+                  <i class="ti-angle-right"></i>
+                </a>
+              </div>
+            </div>
+            <!-- info product -->
             <div class="row">
-              <div class="col l-2-4"></div>
-              <div class="col l-2-4"></div>
-              <div class="col l-2-4"></div>
-              <div class="col l-2-4"></div>
-              <div class="col l-2-4"></div>
+              <!--product  -->
+              <div class="col l-2-4">
+                <a class="product-item">
+                  <img
+                    src="https://cf.shopee.vn/file/0b546dae9c00ece963bf72358b1da815_tn"
+                    alt=""
+                    class="product-item__img"
+                  />
+                  <img
+                    src="https://cf.shopee.vn/file/50777252f6da4a4e072fedc1599e409e"
+                    alt=""
+                    class="product-item__background-img"
+                  />
+                  <h5 class="product-item__info">
+                    Gói sẻum tinh chất dưởngx trắng, căng bóng, chống lão hóa...
+                  </h5>
+                  <div class="product-item__price">
+                    <div class="product-item__price-old">6.000đ</div>
+                    <div class="product-item__price-new">3.500đ</div>
+                  </div>
+                  <div class="product-item__active">
+                    <span class="product-item__active-tym">
+                      <i class="ti-heart product-item__active-emptry"></i>
+                      <i class="fas fa-heart product-item__active-filled"></i>
+                    </span>
+                    <span class="product-item__active-rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="product-item__price">Đã bán 1,4k</span>
+                  </div>
+                  <div class="product-item__origin">Quảng Ngãi</div>
+                  <div class="product-item__type">Yêu thích</div>
+                  <div class="product-item__sale">
+                    <span>42%</span>
+                    <span>GIẢM</span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- footer -->
       <div class="footer"></div>
     </div>
     <!-- modal -->
@@ -535,7 +633,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>   -->
 
         <!-- login form-->
         <!-- <div class="auth-container">

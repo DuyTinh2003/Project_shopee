@@ -3,7 +3,7 @@
   --black-color: #000;
   --text-color: #333;
   --primary-color: #ee4d2e;
-  --header-height: 120px;
+  --header-height: 113px;
   --nav-height: 24px;
   --header-width-search-height: calc(var(--header-height) - var(--nav-height));
   --from: 0.7;
@@ -16,6 +16,9 @@ html {
   line-height: 1.6rem;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+}
+.main {
+  background-color: #f5f5f5;
 }
 .mr--16 {
   margin-right: 16px !important;
@@ -84,11 +87,17 @@ html {
   margin: 0;
   padding: 8px 0px;
   cursor: pointer;
-  font-size: 1.3rem;
+  text-align: center;
+  font-size: 1.4rem;
   background-color: var(--white-color);
+  border-radius: 2px;
 }
 .btn:hover {
   opacity: 0.8;
+}
+.btn.size-m {
+  min-width: 90px;
+  min-height: 34px;
 }
 .btn.btn--primary {
   background-color: #f8492f;

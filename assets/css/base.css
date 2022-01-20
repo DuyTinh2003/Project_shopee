@@ -3,6 +3,9 @@
   --black-color: #000;
   --text-color: #333;
   --primary-color: #ee4d2e;
+  --green-color: green;
+  --gold-color: #ffce3d;
+  --text-footer: rgba(0, 0, 0, 0.54);
   --header-height: 113px;
   --nav-height: 24px;
   --header-width-search-height: calc(var(--header-height) - var(--nav-height));
@@ -103,4 +106,7 @@ html {
   background-color: #f8492f;
   border: none;
   color: var(--white-color);
+}
+.footer {
+  border-top: 4px solid var(--primary-color);
 }
